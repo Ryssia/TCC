@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Ciclo;
 
 class CicloController extends Controller
 {
@@ -32,7 +33,8 @@ class CicloController extends Controller
             $ciclos->colica = $request->get('colica');
             $ciclos->dor_cabeca = $request->get('dor_cabeca');
             $ciclos->dor_seio = $request->get('dor_seios');
-            $sintomas->save();
+            $ciclos->user_id = $request->user_id;
+            $ciclos->save();
             
 
             return redirect()->route('ciclos.index');
@@ -41,24 +43,31 @@ class CicloController extends Controller
     
     public function show($id)
     {
-        //
+        $ciclo = Ciclo::find($id);
     }
 
    
     public function edit($id)
     {
-        //
+        $ciclo = Ciclo::find($id);
     }
 
    
     public function update(Request $request, $id)
     {
-        //
+        $ciclo = Ciclo::find($id);
+        $ciclo->inicio = $request->get('inicio');
+        $ciclo->final = $request->get('final');
+        $ciclo->fluxo = $request->get('fluxo');
+        $ciclo->colica = $request->get('colica');
+        $ciclo->dor_cabeca = $request->get('dor_cabeca');
+        $ciclo->dor_seio = $request->get('dor_seios');
+        $ciclo->save();
     }
 
    
     public function destroy($id)
     {
-        //
+        Ciclo::destroy($id);
     }
 }
