@@ -19,29 +19,28 @@ class CicloController extends Controller
   
     public function create()
     {
-        $ciclos = Ciclo::all();
     
-        //return view('ciclos.create')->with('ciclos', $ciclos);
+        return view('ciclos.create');
     }
 
    
     public function store(Request $request)
     {
-        $ciclos = new Ciclo();
-            $ciclos->inicio = $request->get('inicio');
-            $ciclos->final = $request->get('final');
-            $ciclos->fluxo = $request->get('fluxo');
-            $ciclos->colica = $request->get('colica');
-            $ciclos->dor_cabeca = $request->get('dor_cabeca');
-            $ciclos->dor_seios = $request->get('dor_seios');
-            $ciclos->user_id = $request->user_id;
-            $ciclos->save();
+        // $ciclos = new Ciclo();
+        //     $ciclos->inicio = $request->get('inicio');
+        //     $ciclos->final = $request->get('final');
+        //     $ciclos->fluxo = $request->fluxo;
+        //     $ciclos->colica = $request->get('colica');
+        //     $ciclos->dor_cabeca = $request->get('dor_cabeca');
+        //     $ciclos->dor_seios = $request->get('dor_seios');
+        //     //$ciclos->user_id = $request->user_id;
+        //     $ciclos->user_id = 1;
+        //     $ciclos->save();
             
-            echo"ok";
 
-            // return redirect()->route('ciclos.index');
+        //     return redirect()->route('ciclos.index');
 
-        
+        echo "Valor: ".$request->fluxo;
     }
 
     
