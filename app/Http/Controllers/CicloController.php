@@ -13,6 +13,7 @@ class CicloController extends Controller
         $ciclos = Ciclo::all();
         
        // return view('ciclos.index')->with('ciclos', $ciclos)
+       return $ciclos->toJson();
     }
 
   
@@ -32,12 +33,15 @@ class CicloController extends Controller
             $ciclos->fluxo = $request->get('fluxo');
             $ciclos->colica = $request->get('colica');
             $ciclos->dor_cabeca = $request->get('dor_cabeca');
-            $ciclos->dor_seio = $request->get('dor_seios');
+            $ciclos->dor_seios = $request->get('dor_seios');
             $ciclos->user_id = $request->user_id;
             $ciclos->save();
             
+            echo"ok";
 
-            return redirect()->route('ciclos.index');
+            // return redirect()->route('ciclos.index');
+
+        
     }
 
     
@@ -56,13 +60,14 @@ class CicloController extends Controller
     public function update(Request $request, $id)
     {
         $ciclo = Ciclo::find($id);
-        $ciclo->inicio = $request->get('inicio');
-        $ciclo->final = $request->get('final');
-        $ciclo->fluxo = $request->get('fluxo');
-        $ciclo->colica = $request->get('colica');
-        $ciclo->dor_cabeca = $request->get('dor_cabeca');
-        $ciclo->dor_seio = $request->get('dor_seios');
+        // $ciclo->inicio = $request->get('inicio');
+        // $ciclo->final = $request->get('final');
+        // $ciclo->fluxo = $request->get('fluxo');
+        // $ciclo->colica = $request->get('colica');
+        // $ciclo->dor_cabeca = $request->get('dor_cabeca');
+        $ciclo->dor_seios = $request->get('dor_seios');
         $ciclo->save();
+        
     }
 
    
