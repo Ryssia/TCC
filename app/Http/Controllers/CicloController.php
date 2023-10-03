@@ -12,8 +12,8 @@ class CicloController extends Controller
     {
         $ciclos = Ciclo::all();
         
-       // return view('ciclos.index')->with('ciclos', $ciclos)
-       return $ciclos->toJson();
+       return view('ciclos.index')->with('ciclos', $ciclos);
+       //return $ciclos->toJson();
     }
 
   
@@ -51,20 +51,24 @@ class CicloController extends Controller
    
     public function edit($id)
     {
-        $ciclo = Ciclo::find($id);
+        $ciclos = Ciclo::all(); 
+        return view('ciclos.edit')->with('ciclos', $ciclos);
+
     }
 
    
     public function update(Request $request, $id)
     {
         $ciclo = Ciclo::find($id);
-        // $ciclo->inicio = $request->get('inicio');
-        // $ciclo->final = $request->get('final');
-        // $ciclo->fluxo = $request->get('fluxo');
-        // $ciclo->colica = $request->get('colica');
-        // $ciclo->dor_cabeca = $request->get('dor_cabeca');
+        $ciclo->inicio = $request->get('inicio');
+        $ciclo->final = $request->get('final');
+        $ciclo->fluxo = $request->get('fluxo');
+        $ciclo->colica = $request->get('colica');
+        $ciclo->dor_cabeca = $request->get('dor_cabeca');
         $ciclo->dor_seios = $request->get('dor_seios');
         $ciclo->save();
+
+        return redirect()->route('ciclos.index');
         
     }
 
@@ -72,5 +76,6 @@ class CicloController extends Controller
     public function destroy($id)
     {
         Ciclo::destroy($id);
+        return redirect()->route('ciclos.index');
     }
 }
