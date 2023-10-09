@@ -26,7 +26,7 @@
 </div>
 <div class="row">
     <div class="col text-center">
-        <a href="{{ route('ciclos.create') }}" class="btn btn-success">
+        <a href="{{ route('dicas') }}" class="btn btn-success">
             Cadastrar Ciclo
         </a>
     </div>
