@@ -120,6 +120,13 @@
                                 </svg>
                                 &nbsp;Cadastrar Ciclo
                             </a>
+                            <a href="/ciclos.index" class="btn text-white" style="background-color: #f38ebd; width: 80%;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M6.293 4.293a1 1 0 0 1 1.414 0L12 7.586V6a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8.414l4.293 4.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 1.414z"/>
+                                </svg>
+                                &nbsp;Voltar
+                            </a>
+
                         </div>
                     </div>
                 </div>

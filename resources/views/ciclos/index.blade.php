@@ -36,7 +36,7 @@
 <div class="row">
     <div class="col text-center">
         <a href="{{ route('ciclos.create') }}" class="btn btn-success">
-            Cadastrar Ciclo
+            Cadastrar Novo Ciclo
         </a>
     </div>
 </div>

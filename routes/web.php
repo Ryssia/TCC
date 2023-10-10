@@ -17,9 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/dashboard', 'CicloController@index')->middleware(['auth'])->name('dashboard');
+
+/*Route::get('/dashboard', function () {
+    return view('ciclos.index');
 })->middleware(['auth'])->name('dashboard');
+*/
+
+Route::resource('/ciclos', 'CicloController');
 
 Route::get('/dicas', function() {
     return view ('dicas.dicas');

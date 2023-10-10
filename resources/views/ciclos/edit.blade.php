@@ -6,7 +6,7 @@
     <div class="col d-flex justify-content-center align-items-center">
         <div class="card w-75 text-center">
             <div class="card-body">
-                <form method="POST" action="{{ route('ciclo.edit', $ciclo->id) }}"> 
+                <form method="POST" action="{{ route('ciclos.edit', $ciclos->id) }}"> 
                     @csrf
                     @method('PUT')
                     <div class="row">
@@ -16,7 +16,7 @@
                                 <input type="date" 
                                     class="form-control @if($errors->has('inicio')) is-invalid @endif"
                                     name="inicio" 
-                                    value="{{ $ciclo->inicio }}" 
+                                    value="{{ $ciclos->inicio }}" 
                                     style="color:#f38ebd"
                                 />
                                 @if($errors->has('inicio'))
@@ -34,7 +34,7 @@
                                 <input type="date" 
                                     class="form-control @if($errors->has('final')) is-invalid @endif"
                                     name="final" 
-                                    value="{{ $ciclo->final }}" 
+                                    value="{{ $ciclos->final }}" 
                                     style="color:#f38ebd"
                                 />
                                 @if($errors->has('final'))

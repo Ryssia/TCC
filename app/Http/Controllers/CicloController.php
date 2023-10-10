@@ -51,7 +51,7 @@ class CicloController extends Controller
    
     public function edit($id)
     {
-        $ciclos = Ciclo::all(); 
+        $ciclos = Ciclo::find($id); 
         return view('ciclos.edit')->with('ciclos', $ciclos);
 
     }
