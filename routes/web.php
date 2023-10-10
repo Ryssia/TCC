@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
-Route::get('/dashboard', 'CicloController@index')->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', function() {
+    return view('testehome');
+})->middleware(['auth'])->name('dashboard');
 
 /*Route::get('/dashboard', function () {
     return view('ciclos.index');
