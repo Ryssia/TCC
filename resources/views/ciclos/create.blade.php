@@ -144,23 +144,23 @@
 
         function getFlow(val) {
             document.getElementById("fluxo").value = val;
-            return ["Muito Leve", "Leve", "Regular", "Intenso", "Muito Intenso"][val];
+            return ["Muito Leve", "Leve", "Moderado", "Intenso", "Muito Intenso"][val];
             
         }
 
         function getColic(val) {
             document.getElementById("colica").value = val;
-            return ["Muito Fraca", "Fraca", "Regular", "Forte", "Muito Forte"][val];
+            return ["Nenhuma", "Fraca", "Moderada", "Forte", "Muito Forte"][val];
         }
 
         function getPainHead(val) {
             document.getElementById("dor_cabeca").value = val;
-            return ["Muito Fraca", "Fraca", "Regular", "Forte", "Muito Forte"][val];
+            return ["Nenhuma", "Fraca", "Moderada", "Forte", "Muito Forte"][val];
         }
 
         function getBreastPain(val) {
             document.getElementById("dor_seios").value = val;
-            return ["Muito Fraca", "Fraca", "Regular", "Forte", "Muito Forte"][val];
+            return ["Nenhuma", "Fraca", "Moderada", "Forte", "Muito Forte"][val];
         }
 
     </script>

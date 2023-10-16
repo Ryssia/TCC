@@ -24,13 +24,7 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col text-center">
-        <a href="{{ route('dicas') }}" class="btn btn-success">
-            Cadastrar Ciclo
-        </a>
-    </div>
-</div>
+
 @endsection
 
 <script>
