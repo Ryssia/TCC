@@ -26,18 +26,17 @@ class CicloController extends Controller
    
     public function store(Request $request)
     {
-        $ciclos = new Ciclo();
+        /*$ciclos = new Ciclo();
             $ciclos->inicio = $request->get('inicio');
             $ciclos->final = $request->get('final');
             $ciclos->fluxo = $request->fluxo;
             $ciclos->colica = $request->get('colica');
             $ciclos->dor_cabeca = $request->get('dor_cabeca');
             $ciclos->dor_seios = $request->get('dor_seios');
-            //$ciclos->user_id = $request->user_id;
+            //$ciclos->user_id = $request->user_id; Auth::User()->id;
             $ciclos->user_id = 1;
             $ciclos->save();
-            
-
+          */  
             return redirect()->route('ciclos.index');
     
     }

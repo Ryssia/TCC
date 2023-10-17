@@ -10,6 +10,6 @@ class DicaController extends Controller
     public function index()
     {
         $dicas = Dica::all();
-        return view('dicas'); 
+        return view('dicas.index'); 
     }
 }

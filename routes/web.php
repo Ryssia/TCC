@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
-
-Route::get('/dashboard', function() {
     return view('testehome');
-})->middleware(['auth'])->name('dashboard');
+})->middleware('auth')->name('home');
+
+/*Route::get('/dashboard', function() {
+    return view('testehome');
+})->middleware(['auth'])->name('dashboard');*/
 
 /*Route::get('/dashboard', function () {
     return view('ciclos.index');
@@ -27,9 +27,10 @@ Route::get('/dashboard', function() {
 */
 
 Route::resource('/ciclos', 'CicloController');
+Route::get('/dicas', 'DicaController@index')->middleware('auth')->name('dicas.index');
 
-Route::get('/dicas', function() {
+/*Route::get('/dicas', function() {
     return view ('dicas.dicas');
-})->name('dicas');
+})->name('dicas');*/
 
 require __DIR__.'/auth.php';
