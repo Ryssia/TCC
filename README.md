@@ -62,3 +62,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+Erro ao registrar usuário
+The password confirmation does not match.
+
+acredito que seja pq não tem o campo de confirmar a senha
