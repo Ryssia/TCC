@@ -121,11 +121,17 @@
             <div class="card-body">
                 <div class="row mt-2">
                     <div class="col">
-                        <a href="{{ route('ciclos.index') }}" class="btn text-white" style="background-color: #f38ebd; width: 80%;">
+                        <a href="{{ route('ciclos.index') }}" class="btn text-white" style="background-color: #f38ebd; width: 20%;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                 <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zm3.93 5.47l-4.242 4.243a.25.25 0 0 1-.354 0L4.07 8.717a.25.25 0 0 1 .177-.427h.177a.25.25 0 0 0 .177-.427L5.293 7.5l3.536-3.536a.25.25 0 0 1 .354 0l.707.707a.25.25 0 0 1 0 .354z"/>
                             </svg>
                             &nbsp;Salvar Ciclo
+                        </a>
+                        <a href="{{ route('ciclos.index') }}" class="btn text-white" style="background-color: #f38ebd; width: 20%;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                                <path d="M6.293 4.293a1 1 0 0 1 1.414 0L12 7.586V6a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8.414l4.293 4.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 1.414z"/>
+                            </svg>
+                            &nbsp;Voltar
                         </a>
                     </div>
                 </div>

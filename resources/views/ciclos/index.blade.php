@@ -16,14 +16,13 @@
             <tbody>
                 @foreach($ciclos as $ciclo)
                 <tr>
-                    <td>{{ $ciclo->inicio }}</td>
-                    <td>{{ $ciclo->final }}</td>
+                    <td>{{ date('d-m-Y', strtotime($ciclo->inicio)) }}</td>
+                    <td>{{ date('d-m-Y', strtotime($ciclo->final)) }}</td>
                     <td>
-                        <a href="{{ route('ciclos.edit', $ciclo->id) }}" class="btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                <path d="M12.646 2.646a.5.5 0 0 1 .708 0l1 1a.5.5 0 0 1 0 .708L13.354 5.5l-2.708-2.708L12.646 2.646zM4.5 10.793v.707l-2.647.36a.5.5 0 0 1-.593-.592l.36-2.647h.707L11.146 13H4.5v-.707z"/>
-                                <path d="M13.354 5.5l-10 10L1 15l10-10 2.354 2.354a.5.5 0 0 1 0 .708l-1 1a.5.5 0 0 1-.708 0L10.5 8.707 8.646 6.854a.5.5 0 0 1 0-.708l1-1a.5.5 0 0 1 .708 0L13.354 5.5z"/>
-                            </svg>
+                        <a href="{{ route('ciclos.edit', $ciclo->id) }}" class="btn btn-primary" style="background-color: #9fa1f8; outline:none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
                         </a>
                     </td>
                 </tr>
@@ -35,7 +34,7 @@
 
 <div class="row">
     <div class="col text-center">
-        <a href="{{ route('ciclos.create') }}" class="btn btn-success">
+        <a href="{{ route('ciclos.create') }}" class="btn btn-success" style="background-color: #9fa1f8; outline:none;">
             Cadastrar Novo Ciclo
         </a>
     </div>
