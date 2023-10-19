@@ -43,7 +43,7 @@
                                         placeholder="Senha"
                                         value="{{old('password')}}"
                                     />
-                                    <label for="email">Senha</label>
+                                    <label for="password">Senha</label>  <!--mexi aqui, onde ta password eatava escrito Email-->
                                     @if($errors->has('password'))
                                         <div class='invalid-feedback'>
                                             {{ $errors->first('password') }}
