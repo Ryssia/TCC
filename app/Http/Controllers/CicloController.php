@@ -37,7 +37,9 @@ class CicloController extends Controller
             //$ciclos->user_id = 1;
             $ciclos->save();
           
-            return redirect()->route('ciclos.index');
+            error_log('passou');
+
+            return redirect()->route('ciclos.index'); 
     
     }
 
