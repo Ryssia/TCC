@@ -5,10 +5,10 @@
 
 <form method="POST" action="{{route('ciclos.store')}}"> 
     @csrf
-    <input type="hidden" name="fluxo" id="fluxo"/>
-    <input type="hidden" name="colica" id="colica"/>
-    <input type="hidden" name="dor_cabeca" id="dor_cabeca"/>
-    <input type="hidden" name="dor_seios" id="dor_seios"/>
+    <input type="hidden" name="fluxo" id="fluxo" value="2"/>
+    <input type="hidden" name="colica" id="colica" value="2"/>
+    <input type="hidden" name="dor_cabeca" id="dor_cabeca" value="2"/>
+    <input type="hidden" name="dor_seios" id="dor_seios" value="2"/>
     
     <div class="row">
         <div class="col d-flex justify-content-center align-items-center">
@@ -112,13 +112,15 @@
                 <div class="card-body">
                     <div class="row mt-2">
                         <div class="col">
-                            <button type="submit" class="btn text-white" style="background-color: #f38ebd; width: 20%;">
+                            <button class="btn text-white" style="background-color: #f38ebd; width: 90%;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
                                 </svg>
                                 &nbsp;Cadastrar Ciclo
                             </button>
-                            <a href="{{ route('ciclos.index') }}" class="btn text-white" style="background-color: #f38ebd; width: 20%;">
+                        </div>
+                        <div class="col">
+                            <a href="{{ route('ciclos.index') }}" class="btn text-white" style="background-color: #f38ebd; width: 90%;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
                                     <path d="M6.293 4.293a1 1 0 0 1 1.414 0L12 7.586V6a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8.414l4.293 4.293a1 1 0 0 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 1.414z"/>
                                 </svg>
@@ -133,6 +135,7 @@
 </form>
 
 @endsection
+
 
 
 @section('script')
