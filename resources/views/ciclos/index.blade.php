@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 @foreach($ciclos as $ciclo)
-                    @if($ciclo->user_id === Auth::id())
+                    @if($ciclo->user_id === Auth::id()) 
                         <tr>
                             <td class="fs-5" style="color:#f38ebd;">{{ date('d-m-Y', strtotime($ciclo->inicio)) }}</td>
                             <td class="fs-5" style="color:#f38ebd;">{{ date('d-m-Y', strtotime($ciclo->final)) }}</td>
