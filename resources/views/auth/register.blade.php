@@ -79,10 +79,30 @@
                                         placeholder="Senha"
                                         value="{{old('password')}}"
                                     />
-                                    <label for="email">Senha</label>
+                                    <label for="password">Senha</label>
                                     @if($errors->has('password'))
                                         <div class='invalid-feedback'>
                                             {{ $errors->first('password') }}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <div class="form-floating mb-3" style="width: 80%;">
+                                    <input 
+                                        type="password" 
+                                        class="form-control @if($errors->has('password_confirmation')) is-invalid @endif" 
+                                        name="password_confirmation" 
+                                        placeholder="Confirmar Senha"
+                                        value="{{old('password')}}"
+                                    />
+                                    <label for="password_confirmation">Confirmar Senha</label>
+                                    @if($errors->has('password_confirmation'))
+                                        <div class='invalid-feedback'>
+                                            {{ $errors->first('password_confirmation') }}
                                         </div>
                                     @endif
                                 </div>
