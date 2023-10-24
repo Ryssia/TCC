@@ -9,11 +9,7 @@
     <!-- Google Chart -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="{{asset('/css/card.css')}}" />
+    
     <title>FirstPeriod</title>
 
     <style> 

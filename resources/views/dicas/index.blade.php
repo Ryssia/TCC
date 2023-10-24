@@ -37,36 +37,4 @@
 
 @endsection
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Referências aos elementos HTML
-        const btnAbsorventes = document.getElementById("btnAbsorventes");
-        const btnFluxo = document.getElementById("btnFluxo");
-        const btnColica = document.getElementById("btnColica");
-        const conteudoAbsorventes = document.getElementById("conteudoAbsorventes");
-        const conteudoFluxo = document.getElementById("conteudoFluxo");
-        const conteudoColica = document.getElementById("conteudoColica");
 
-        // Função para mostrar o conteúdo relacionado ao botão clicado
-        function mostrarConteudo(id) {
-            conteudoAbsorventes.style.display = "none";
-            conteudoFluxo.style.display = "none";
-            conteudoColica.style.display = "none";
-
-            document.getElementById(id).style.display = "block";
-        }
-
-        // Adicionar event listeners para os botões
-        btnAbsorventes.addEventListener("click", function () {
-            mostrarConteudo("conteudoAbsorventes");
-        });
-
-        btnFluxo.addEventListener("click", function () {
-            mostrarConteudo("conteudoFluxo");
-        });
-
-        btnColica.addEventListener("click", function () {
-            mostrarConteudo("conteudoColica");
-        });
-    });
-</script>
