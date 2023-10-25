@@ -66,7 +66,7 @@
                     </div>
                     <div class="range">
                         <input type="range" class="form-range" min="0" max="4" oninput="this.nextElementSibling.value = getFlow(parseInt(this.value))" value="{{$ciclos->fluxo}}" />
-                        <output class="fw-bold" style="color:#a19d9f;">Regular</output>
+                        <output class="fw-bold" style="color:#a19d9f;">Moderado</output>
                     </div>
                     <hr>
                     <div class="mb-2 d-flex justify-content-center">
@@ -78,7 +78,7 @@
                     </div>
                     <div class="range">
                         <input type="range" class="form-range" min="0" max="4" oninput="this.nextElementSibling.value = getColic(parseInt(this.value))" value="{{$ciclos->colica}}"/>
-                        <output class="fw-bold" style="color:#a19d9f;">Regular</output>
+                        <output class="fw-bold" style="color:#a19d9f;">Moderada</output>
                     </div>
                     <hr>
                     <div class="mb-2 d-flex justify-content-center">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="range">
                         <input type="range" class="form-range" min="0" max="4" oninput="this.nextElementSibling.value = getPainHead(parseInt(this.value))" value="{{$ciclos->dor_cabeca}}"/>
-                        <output class="fw-bold" style="color:#a19d9f;">Regular</output>
+                        <output class="fw-bold" style="color:#a19d9f;">Moderada</output>
                     </div>
                     <div class="mb-2 d-flex justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#f38ebd" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
@@ -99,7 +99,7 @@
                     </div>
                     <div class="range">
                         <input type="range" class="form-range" min="0" max="4" oninput="this.nextElementSibling.value = getBreastPain(parseInt(this.value))" value="{{$ciclos->dor_seios}}"/>
-                        <output class="fw-bold" style="color:#a19d9f;">Regular</output>
+                        <output class="fw-bold" style="color:#a19d9f;">Moderada</output>
                     </div>
                     <hr>
                 </div>
