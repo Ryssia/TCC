@@ -44,7 +44,7 @@ body {
 
 
 .card .icon {
-  color: rgba(255, 0, 64, 0.76);
+  color: rgba(255, 0, 0, 0.76);
   background-color: rgba(255, 255, 255, 0.5);
   padding: 5px;
   font-size: 50px;
@@ -85,12 +85,13 @@ body {
 }
 
 .card .fluxo{
-  background-color:#de685e;
-
+  background-color:#f8988f;
 }
 
 .card .absorvente{
-
+  background-color:#86c4f7;
 }
 
-.card .colica{}
+.card .colica{
+  background-color:#fccc85;
+}

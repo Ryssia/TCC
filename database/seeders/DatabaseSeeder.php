@@ -20,12 +20,22 @@ class DatabaseSeeder extends Seeder
         $data = [
             ["descricao" => "absorvente"],
             ["descricao" => "fluxo"], 
+            ["descricao" => "colica"],
+            ["descricao" => "geral"],
         ];
         DB::table('categorias')->insert($data);
 
         // DICAS
         $data = [
-            ["categoria_id"=>"1", "descricao"=>"ipsum lorem ibdum"],
+            ["categoria_id"=>"1", "descricao"=>"Absorventes Descartáveis: São os absorventes mais comuns e encontrados em mercados e farmácias. Eles são descartados após o uso, o que os torna convenientes. Existem absorventes para fluxo leve, médio e intenso."],
+            ["categoria_id"=>"1", "descricao"=>"O que é um Absorvente?
+            Um absorvente é um produto de higiene feminina que é usado para absorver o fluxo menstrual durante o período. Ele é feito de materiais absorventes e é colocado na calcinha e ajuda a manter te seca e confortável."],
+            ["categoria_id"=>"1", "descricao"=>"Escolher o Tamanho Correto: Dependendo da quantidade de fluxo o tamanho do absorvente pode mudar, absorventes menores são projetados para fluxo leve a médio, já absorventes grandes e noturnos são mais indicados para fluxos intensos e uso noturno"],
+            ["categoria_id"=>"1", "descricao"=>"Absorventes Reutilizáveis: Alguns absorventes reutilizáveis são feitos de tecido e podem ser lavados e usados novamente. Eles são uma opção mais sustentável e ajudam o meio ambiente, devido a minimizar a produção de lixo."],
+            ["categoria_id"=>"2", "descricao"=>"O Que é o Fluxo Menstrual?
+            O fluxo menstrual é o nome dado ao sangue que sai do útero da mulher durante este período. Este sangramento é uma parte normal do ciclo menstrual, normalmente dura de 3 a 7 dias."],
+            ["categoria_id"=>"2", "descricao"=>"A menstruação ocorre se o óvulo que foi liberado durante o ciclo menstrual não for fertilizado, assim o corpo o expulsa, juntamente com revestimento do útero, o que causa o sangramento."],
+            ["categoria_id"=>"4", "descricao"=>"Sempre carregue alguns absorventes extras na bolsa para emergências."],
         ];
         DB::table('dicas')->insert($data);
 
