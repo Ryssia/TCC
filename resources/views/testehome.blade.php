@@ -5,20 +5,20 @@
 
     <div class="row">
         <div class="col d-flex justify-content-center align-items-center">
-            <div id="piechartA" style="width: 480px; height: 320px;"></div>
+            <div id="piechartA" style="width: 600px; height: 480px;"></div>
         </div>
-        <div class="col d-flex justify-content-center align-items-center">
+       <!-- <div class="col d-flex justify-content-center align-items-center">
             <div id="piechartB" style="width: 480px; height: 320px;"></div>
-        </div>
+        </div> -->
     </div>
-    <div class="row">
+   <!--  <div class="row">
         <div class="col d-flex justify-content-center align-items-center">
             <div id="piechartC" style="width: 480px; height: 320px;"></div>
         </div>
         <div class="col d-flex justify-content-center align-items-center">
             <div id="piechartD" style="width: 480px; height: 320px;"></div>
         </div>
-    </div>
+    </div> -->
     <br>
 @endsection
 

@@ -76,12 +76,12 @@ class CicloController extends Controller
 
     public function dashboard() {
 
-        $datas = Ciclo::select(['inicio', 'final'])->take(6)->get()->toJson();
+        $datas = Ciclo::select(['inicio', 'final'])->whereRaw('final is not null')->take(6)->get()->toJson();
 
         $sintomas = Ciclo::select(['fluxo', 'colica', 'dor_cabeca', 'dor_seios'])
                 ->take(6)->get()->toJson();
         
-        // return $datas;
+        //return $datas;
         return view('testehome', compact('datas', 'sintomas'));
 
     }
