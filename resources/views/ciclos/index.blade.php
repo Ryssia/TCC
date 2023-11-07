@@ -5,7 +5,7 @@
 
 @if($flag != 0)
     <script>
-        let msg = {!! $text !!};   
+        let msg = "{!! $text !!}";   
         Swal.fire(msg);
     </script>
 @endif

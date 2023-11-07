@@ -4,9 +4,11 @@
 @section('conteudo')
 
     @if($count > 0)
-        <div class="alert alert-primary" role="alert">
-            Você tem um ciclo em aberto!
-            <a href="{{ route('ciclos.index') }}" class="btn btn-primary">Ir para Ciclos</a>
+        <div class="alert alert-primary d-flex justify-content-center align-items-center" role="alert">
+            <div class="d-flex flex-column align-items-center">
+                <p class="mb-0">Você tem um ciclo em aberto!</p>
+                <a href="{{ route('ciclos.index') }}" class="btn btn-primary mt-2">Ir para Ciclos</a>
+            </div>
         </div>
     @endif
    
