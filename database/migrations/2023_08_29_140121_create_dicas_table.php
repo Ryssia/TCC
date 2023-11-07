@@ -16,6 +16,7 @@ class CreateDicasTable extends Migration
         Schema::create('dicas', function (Blueprint $table) {
             $table->id();
             $table->string('descricao');
+            $table->boolean('notificacao');
             $table->unsignedBigInteger('categoria_id');
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->softDeletes();

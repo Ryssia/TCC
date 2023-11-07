@@ -2,6 +2,14 @@
 
 @section('conteudo')
 
+
+@if($flag != 0)
+    <script>
+        let msg = {!! $text !!};   
+        Swal.fire(msg);
+    </script>
+@endif
+
 <div class="row">
     <div class="col col-md-6 offset-md-3 text-center">
         <input type="hidden" id="id_remove">
@@ -18,7 +26,7 @@
                     @if($ciclo->user_id === Auth::id()) 
                         <tr>
                             <td class="fs-5" style="color:#f38ebd;">{{ date('d-m-Y', strtotime($ciclo->inicio)) }}</td>
-                            <td class="fs-5" style="color:#f38ebd;">{{ date('d-m-Y', strtotime($ciclo->final)) }}</td>
+                            <td class="fs-5" style="color:#f38ebd;">@if($ciclo->final != null) {{ date('d-m-Y', strtotime($ciclo->final)) }} @else Em aberto @endif</td>
                             <td>
                                 <a href="{{ route('ciclos.edit', $ciclo->id) }}" class="btn text-white" style="background-color: #f38ebd;">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFF" class="bi bi-pencil" viewBox="0 0 16 16">

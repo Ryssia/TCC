@@ -26,6 +26,7 @@ Route::get('/', 'CicloController@dashboard')->middleware('auth')->name('home');
 
 Route::resource('/ciclos', 'CicloController')->middleware('auth');
 Route::get('/dicas', 'DicaController@index')->middleware('auth')->name('dicas.index');
+Route::get('/ciclo/{flag}', 'CicloController@list')->middleware('auth')->name('ciclo.list');
 
 Route::get('/dicasteste', function() {
     return view ('dicas.card');

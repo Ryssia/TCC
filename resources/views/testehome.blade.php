@@ -3,6 +3,13 @@
 
 @section('conteudo')
 
+    @if($count > 0)
+        <div class="alert alert-primary" role="alert">
+            Você tem um ciclo em aberto!
+            <a href="{{ route('ciclos.index') }}" class="btn btn-primary">Ir para Ciclos</a>
+        </div>
+    @endif
+   
     <div class="row">
         <div class="col d-flex justify-content-center align-items-center">
             <div id="piechartA" style="width: 600px; height: 480px;"></div>
