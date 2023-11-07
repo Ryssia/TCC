@@ -71,13 +71,13 @@
           
           <!-- CARD DE DORES -->
           <div class="categoria d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center"> 
-            @foreach($dica_absorvente as $dica)  
+            @foreach($dica_dores as $dica)  
               @if($dica->notificacao == 0)  
                 <div class="card col-lg-4 col-12 ">
-                        <div class="additional absorvente">
+                        <div class="additional dores">
                           <div class="left-card">
                             <!-- categoria -->
-                            <div class="category center">Absorvente</div> 
+                            <div class="category center">Dores</div> 
                             <i class="bi bi-postage-heart center icon"></i>
                           </div>
                         </div>
