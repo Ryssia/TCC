@@ -37,7 +37,10 @@ class DatabaseSeeder extends Seeder
             ["categoria_id"=>"2", "notificacao"=> false, "descricao"=>"O Que é o Fluxo Menstrual?
             O fluxo menstrual é o nome dado ao sangue que sai do útero da mulher durante este período. Este sangramento é uma parte normal do ciclo menstrual, normalmente dura de 3 a 7 dias."],
             ["categoria_id"=>"2", "notificacao"=> false, "descricao"=>"A menstruação ocorre se o óvulo que foi liberado durante o ciclo menstrual não for fertilizado, assim o corpo o expulsa, juntamente com revestimento do útero, o que causa o sangramento."],
-            ["categoria_id"=>"4", "notificacao"=> true, "descricao"=>"Sempre carregue alguns absorventes extras na bolsa para emergências."],
+            ["categoria_id"=>"1", "notificacao"=> true, "descricao"=>"Sempre carregue alguns absorventes extras na bolsa para emergências."],
+            ["categoria_id"=>"2", "notificacao"=> true, "descricao"=>"Se a cólica estiver muito intensa, com a ajuda de um adulto, pode fazer uma compressa quente, apoiando abaixo do umbigo!"],
+            ["categoria_id"=>"3", "notificacao"=> true, "descricao"=>"Dores de cabeça intensas, podem ser sintomas da TPM. Se a dor estiver muito intensa e muito frequente, seria bom marcar uma consulta médica!"],
+            ["categoria_id"=>"4", "notificacao"=> true, "descricao"=>"Essa sensibilidade e dor nos seios, é um sintoma da TPM. Um sutiã que forneça uma boa sustentação ajuda a minimizar a dor. Banhos quentinhos também!"],
         ];
         DB::table('dicas')->insert($data);
 
