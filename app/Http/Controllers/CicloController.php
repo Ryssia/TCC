@@ -107,9 +107,19 @@ class CicloController extends Controller
 
     public function dashboard() {
 
+
+        $user = Auth::user();
+
+        if($user) $user_id = $user->id;
+
         $datas = Ciclo::select(['inicio', 'final'])->whereRaw('final is not null')->take(6)->get()->toJson();
         
-        $count = count(Ciclo::select(['inicio', 'final'])->whereRaw('final is null')->get());
+        // $count = count(Ciclo::select(['inicio', 'final'])->whereRaw('final is null')->get());
+
+
+        $count = Ciclo::where('user_id', $user_id)
+    ->whereNull('final')
+    ->count();
 
         $sintomas = Ciclo::select(['fluxo', 'colica', 'dor_cabeca', 'dor_seios'])
                 ->take(6)->get()->toJson();
